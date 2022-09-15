@@ -68,3 +68,53 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### npm install react-google-login
+### npm install @material-ui
+"start": "nodemon index.js" npm run start,
+
+### popup closed by user error solved with gapi script
+npm i gapi-script --force
+ useEffect(() =>{
+    gapi.load("client: auth2", () => {
+      gapi.auth2.init({clientId:"291688090734-8cm43jgpp07og23bs5k5337airfpvigh.apps.googleusercontent.com" })
+      // console.log(isSignedIn)
+    })
+  },[])
+### ErrorBoundary
+import { ErrorBoundary } from "react-error-boundary";
+
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <ErrorBoundary
+  FallbackComponent={ErrorFallback}
+  onReset={() => {
+    // reset the state of your app so the error doesn't happen again
+  }}
+
+
+### axios
+is used to make requests from api
+
+### onChange
+onChange() when put sth automatically change the input value;
+on change means even a single letter change will trigger that func.
+
+### preventDefault
+const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(setInput(inputValue));
+}
+e.preventDefault(): whenever we submit the button the page will refresh automatically(react avoid to refresh every time)
+### debug tool
+Pesticide for Chrome # Blog_React_App
